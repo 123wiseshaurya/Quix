@@ -22,10 +22,13 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+      # - name: Setup .NET
+      #   uses: actions/setup-dotnet@v3
+      #   with:
+      #     node-version: 20
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20'
 
       - name: Create and start virtual environment
         run: |
