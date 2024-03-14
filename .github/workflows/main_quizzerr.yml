@@ -22,10 +22,11 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Creating new nodejs
-        run:  |
-          using: 'node20'
-          main: 'main.js'
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+          node-version: 20
 
       - name: Create and start virtual environment
         run: |
