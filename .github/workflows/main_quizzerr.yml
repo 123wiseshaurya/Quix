@@ -38,7 +38,7 @@ jobs:
       - name: Set up Node.js 20.x
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '16'
 
       # - name: Set up Node.js 20.x
       #   uses: actions/setup-node@v2
@@ -82,7 +82,7 @@ jobs:
         run: unzip release.zip
 
       - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v4
+        uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
           app-name: 'quizzerr'
